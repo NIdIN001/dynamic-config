@@ -1,0 +1,8 @@
+#to run it on command from target folder, type:
+#java -Dspring.config.location="file:../src/main/resources/application.yml" -jar refreshConfig-1.0-SNAPSHOT.jar
+
+server:
+  port: 8085
+
+config:
+  path: #set path to dynamic config .yml or .properties
