@@ -1,4 +1,4 @@
-package com.company.config.reader;
+package com.company.dynamic_config.reader;
 
 import com.company.exception.DynamicConfigException;
 import com.fasterxml.jackson.databind.ObjectMapper;

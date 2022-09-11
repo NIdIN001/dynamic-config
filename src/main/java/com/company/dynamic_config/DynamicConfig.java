@@ -1,8 +1,9 @@
-package com.company.config;
+package com.company.dynamic_config;
 
-import com.company.config.reader.CfgFileType;
-import com.company.config.reader.ConfigReader;
-import com.company.config.reader.PropertyConfigReader;
+import com.company.dynamic_config.properties.DynamicConfigProperties;
+import com.company.dynamic_config.reader.CfgFileType;
+import com.company.dynamic_config.reader.ConfigReader;
+import com.company.dynamic_config.reader.PropertyConfigReader;
 import com.company.exception.DynamicConfigException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -37,7 +38,6 @@ public class DynamicConfig<T> {
     }
 
     public T get(Class<T> clazz) throws DynamicConfigException {
-        long lm = dynamicConfigFile.lastModified();
         if (dynamicConfigFile.lastModified() > lastModified) {
             model = reader.reloadConfig(dynamicConfigFile, clazz);
             lastModified = dynamicConfigFile.lastModified();

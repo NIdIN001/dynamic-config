@@ -1,6 +1,6 @@
 package com.company.controller;
 
-import com.company.config.DynamicConfig;
+import com.company.dynamic_config.DynamicConfig;
 import com.company.exception.DynamicConfigException;
 import com.company.model.Model;
 import lombok.RequiredArgsConstructor;

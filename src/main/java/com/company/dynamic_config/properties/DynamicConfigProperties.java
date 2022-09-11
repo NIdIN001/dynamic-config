@@ -1,4 +1,4 @@
-package com.company.config;
+package com.company.dynamic_config.properties;
 
 import lombok.Getter;
 import lombok.Setter;

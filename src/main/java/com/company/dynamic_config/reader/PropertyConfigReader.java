@@ -1,4 +1,4 @@
-package com.company.config.reader;
+package com.company.dynamic_config.reader;
 
 import com.company.exception.DynamicConfigException;
 
@@ -17,10 +17,6 @@ public class PropertyConfigReader implements ConfigReader {
 
     @Override
     public <T> T reloadConfig(File dynamicConfigFile, Class<T> type) throws DynamicConfigException {
-        return parseProperty(dynamicConfigFile, type);
-    }
-
-    private <T> T parseProperty(File dynamicConfigFile, Class<T> type) throws DynamicConfigException {
         try (FileInputStream fos = new FileInputStream(dynamicConfigFile)) {
             properties.clear();
             properties.load(fos);
